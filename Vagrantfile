@@ -368,6 +368,7 @@ TEXT
   ##### DEFINE VM for spine01 #####
   config.vm.define "spine01" do |device|
     # device.vm.hostname = "spine01"
+    $hostname = "spine01"
     device.vm.box = "kvadrage/alt_netdev"
     config.vbguest.auto_update = false
 
@@ -436,6 +437,7 @@ TEXT
 ##### DEFINE VM for spine02 #####
 config.vm.define "spine02" do |device|
   # device.vm.hostname = "spine02"
+  $hostname = "spine02"
   device.vm.box = "kvadrage/alt_netdev"
   config.vbguest.auto_update = false
 
@@ -504,6 +506,7 @@ end
 ##### DEFINE VM for spine03 #####
 config.vm.define "spine03" do |device|
   # device.vm.hostname = "spine03"
+  $hostname = "spine03"
   device.vm.box = "kvadrage/alt_netdev"
   config.vbguest.auto_update = false
 
@@ -571,6 +574,7 @@ end
 ##### DEFINE VM for spine04 #####
 config.vm.define "spine04" do |device|
   # device.vm.hostname = "spine04"
+  $hostname = "spine04"
   device.vm.box = "kvadrage/alt_netdev"
   config.vbguest.auto_update = false
 
@@ -640,7 +644,6 @@ end
     device.vm.hostname = "server01"
     device.vm.box = "centos/7"
 
-
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_server01"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']
@@ -686,7 +689,6 @@ end
   config.vm.define "server02" do |device|
     device.vm.hostname = "server02"
     device.vm.box = "centos/7"
-
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_server02"
@@ -734,7 +736,6 @@ end
     device.vm.hostname = "server03"
     device.vm.box = "centos/7"
 
-
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_server03"
       v.customize ["modifyvm", :id, '--audiocontroller', 'AC97', '--audio', 'Null']
@@ -780,7 +781,6 @@ end
   config.vm.define "server04" do |device|
     device.vm.hostname = "server04"
     device.vm.box = "centos/7"
-
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_server04"
