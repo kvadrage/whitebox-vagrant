@@ -59,4 +59,5 @@ Tested on:
 * host# `git clone https://github.com/kvadrage/whitebox-vagrant && cd whitebox-vagrant`
 * host# `vagrant up`
 * host# `vagrant ssh oob-mgmt-server`
+* oob-mgmt-server# `sudo su - admin` (if was logged as a different user)
 * Now you have key-based ssh access to all VMs: `ssh leaf01`
