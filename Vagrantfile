@@ -1,5 +1,5 @@
 #    Vagrant topology for ALT Linux build for Mellanox Spectrum Switch and RHEL/CentOS servers
-#    Github: https://github.com/kvadrage/altdemo-vagrant.git
+#    Github: https://github.com/kvadrage/whitebox-vagrant.git
 #    Credits: https://github.com/CumulusNetworks/cldemo-vagrant
 #
 #
@@ -9,6 +9,8 @@
 #       -the "oob-provision" directory, which includes ansible playbook to provision mgmt VM
 #       -Virtualbox installed: https://www.virtualbox.org/wiki/Downloads
 
+
+Vagrant.require_version ">= 2.0.2"
 
 $script = <<-SCRIPT
 echo "Running post-init script here..."
@@ -27,7 +29,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "oob-mgmt-server" do |device|
     device.vm.hostname = "oob-mgmt-server"
     device.vm.box = "boxcutter/ubuntu1604"
-
+    config.ssh.username = "admin"
+    config.ssh.private_key_path = "./oob-provision/roles/users/files/internal_private_key"
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_oob-mgmt-server"

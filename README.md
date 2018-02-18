@@ -15,8 +15,12 @@ Host HW requirements:
 * Disk: 25Gb
 
 Host SW requirements:
-* VirtualBox 5.1.x
+* VirtualBox 5.x.x
 * vagrant 2.0.2
+
+Tested on:
+* MacOS 10.11 (El Capitan), Vagrant 2.0.2, VirtualBox 5.1.14
+* Windows 10 Pro, Vagrant 2.0.2, VirtualBox 5.2.4
 
 ## Network topology
 ```
@@ -55,5 +59,4 @@ Host SW requirements:
 * host# `git clone https://github.com/kvadrage/whitebox-vagrant && cd whitebox-vagrant`
 * host# `vagrant up`
 * host# `vagrant ssh oob-mgmt-server`
-* oob-mgmt-server# `sudo su - admin`
 * Now you have key-based ssh access to all VMs: `ssh leaf01`
