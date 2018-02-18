@@ -61,3 +61,8 @@ Tested on:
 * host# `vagrant ssh oob-mgmt-server`
 * oob-mgmt-server# `sudo su - admin` (if was logged as a different user)
 * Now you have key-based ssh access to all VMs: `ssh leaf01`
+
+# Extra
+* admin@oob-mgmt-server:~$ `git clone https://github.com/kvadrage/whitebox-provision && cd whitebox-provision`
+* admin@oob-mgmt-server:~$ `ansible -m ping all`
+* admin@oob-mgmt-server:~$ `ansible-playbook deploy_network.yml`
