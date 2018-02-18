@@ -55,15 +55,15 @@ Tested on:
 * BGP/OSPF/BFD (Bird)
 * VRF support
 
-# Usage
+## Usage
 * host: `git clone https://github.com/kvadrage/whitebox-vagrant && cd whitebox-vagrant`
 * host: `vagrant up`
 * host: `vagrant ssh oob-mgmt-server`
 * oob-mgmt-server: `sudo su - admin` (if was logged as a different user)
 * Now you have key-based ssh access to all VMs: `ssh leaf01`
 
-# Extra
+## Extra
 * oob-mgmt-server: `git clone https://github.com/kvadrage/whitebox-provision && cd whitebox-provision`
 * oob-mgmt-server: `ansible -m ping all`
 * oob-mgmt-server: `ansible-playbook deploy_network.yml`
-* Now you have your fabric up and ready!
+* Now you have your fabric fully provisioned and working!
