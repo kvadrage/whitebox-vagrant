@@ -100,7 +100,6 @@ end
     # device.vm.hostname = "leaf01"
     $hostname = "leaf01"
     device.vm.box = "kvadrage/alt_netdev"
-    config.vbguest.auto_update = false
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_leaf01"
@@ -167,7 +166,6 @@ TEXT
     # device.vm.hostname = "leaf02"
     $hostname = "leaf02"
     device.vm.box = "kvadrage/alt_netdev"
-    config.vbguest.auto_update = false
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_leaf02"
@@ -234,7 +232,6 @@ TEXT
     # device.vm.hostname = "leaf03"
     $hostname = "leaf03"
     device.vm.box = "kvadrage/alt_netdev"
-    config.vbguest.auto_update = false
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_leaf03"
@@ -302,7 +299,6 @@ TEXT
     # device.vm.hostname = "leaf04"
     $hostname = "leaf04"
     device.vm.box = "kvadrage/alt_netdev"
-    config.vbguest.auto_update = false
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_leaf04"
@@ -370,7 +366,6 @@ TEXT
     # device.vm.hostname = "spine01"
     $hostname = "spine01"
     device.vm.box = "kvadrage/alt_netdev"
-    config.vbguest.auto_update = false
 
     device.vm.provider "virtualbox" do |v|
       v.name = "#{wbid}_spine01"
@@ -439,7 +434,6 @@ config.vm.define "spine02" do |device|
   # device.vm.hostname = "spine02"
   $hostname = "spine02"
   device.vm.box = "kvadrage/alt_netdev"
-  config.vbguest.auto_update = false
 
   device.vm.provider "virtualbox" do |v|
     v.name = "#{wbid}_spine02"
@@ -508,7 +502,6 @@ config.vm.define "spine03" do |device|
   # device.vm.hostname = "spine03"
   $hostname = "spine03"
   device.vm.box = "kvadrage/alt_netdev"
-  config.vbguest.auto_update = false
 
   device.vm.provider "virtualbox" do |v|
     v.name = "#{wbid}_spine03"
@@ -576,7 +569,6 @@ config.vm.define "spine04" do |device|
   # device.vm.hostname = "spine04"
   $hostname = "spine04"
   device.vm.box = "kvadrage/alt_netdev"
-  config.vbguest.auto_update = false
 
   device.vm.provider "virtualbox" do |v|
     v.name = "#{wbid}_spine04"

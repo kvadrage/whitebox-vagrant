@@ -30,8 +30,8 @@ systemctl stop NetworkManager.service
 systemctl disable firewalld.service
 systemctl stop firewalld.service
 
-rm -f /etc/sysconfig/network-scripts/ifcfg-eth0
 echo 'DEVICE="eth0" BOOTPROTO="dhcp" ONBOOT="yes" TYPE="Ethernet" PERSISTENT_DHCLIENT="yes"' > /etc/sysconfig/network-scripts/ifcfg-eth0
+echo 'DEVICE="eth1" BOOTPROTO="dhcp" ONBOOT="yes" TYPE="Ethernet" PERSISTENT_DHCLIENT="yes"' > /etc/sysconfig/network-scripts/ifcfg-eth1
 echo 'DEVICE="vagrant" BOOTPROTO="dhcp" ONBOOT="yes" TYPE="Ethernet" PERSISTENT_DHCLIENT="yes"' > /etc/sysconfig/network-scripts/ifcfg-vagrant
 
 # Other stuff
