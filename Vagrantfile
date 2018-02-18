@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
   ##### DEFINE VM for oob-mgmt-server #####
   config.vm.define "oob-mgmt-server" do |device|
     device.vm.hostname = "oob-mgmt-server"
-    device.vm.box = "boxcutter/ubuntu1604"
+    device.vm.box = "ubuntu/xenial64"
     config.ssh.username = "admin"
     config.ssh.private_key_path = "./oob-provision/roles/users/files/internal_private_key"
 
